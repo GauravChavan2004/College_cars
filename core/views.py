@@ -7,3 +7,5 @@ from django.http import HttpResponse
 def index(request):
     return render(request,"core/index.html")
 
+def car_view(request):
+    return render(request, "car_view\car_view.html")
