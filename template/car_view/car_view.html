@@ -8,29 +8,41 @@
   crossorigin="anonymous" />
 <style>
   .car_heading_details {
-    border: 2px solid black;
+    box-shadow: 0 5px 10px rgba(7, 7, 7, 0.53);
     border-radius: 10px;
+    max-height:62vh;
   }
   .car_heading_details h6 {
     font-size: 15px;
     border: 2px solid black;
     border-radius: 10px;
-    padding:4px;
-    margin-left:10px;
-    margin-right:10px;
+    padding: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .car_info{
+    border:1px solid gray;
+    padding:20px;
+    text-align:center;
+    border-radius: 30px;
+  }
+  .car_info i{
+    font-size:18px;
+    margin-right:5px;
+    color:rgba(0, 0, 0, 0.79);
   }
 </style>
-<div class="container p-3" style="margin-top: 100px; border: 2px solid black">
+<div class="container p-3" style="margin-top: 100px">
   <div class="row" style="margin-bottom: 20px">
-    <div class="col-7">
+    <div class="col-7 ms-2 me-2">
       <div
         id="carouselExample"
         class="carousel carousel-dark slide w-100"
         style="border-radius: 15px">
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="border-radius: 10px">
           <div class="carousel-item active">
             <img
-              src="..\media\cars\baleno.jpg"
+              src="..\media\cars\baleno1.jpg"
               class="d-block w-100"
               alt="Baleno Image" />
           </div>
@@ -59,8 +71,62 @@
           </button>
         </div>
       </div>
+      <h3 class="mt-5 mb-4">Car Overview</h3>
+      <div class="car_info">
+        <div class="row justify-content-around p-3">
+          <div class="col"><i class="bi bi-calendar-event-fill"></i> Reg year<br /><b>
+            Aug 2020</b>
+          </div>
+          <div class="col">
+            <i class="bi bi-buildings-fill"></i> Make year<br /><b>
+            2020</b>
+          </div>
+          <div class="col">
+            <i class="bi bi-fuel-pump-fill"></i> Fuel Type<br /><b>
+            Petrol</b>
+          </div>
+        </div>
+        <div class="row justify-content-around p-3">
+          <div class="col">
+            <i class="bi bi-gear-fill"></i> Transmission<br /><b>
+            Manual</b>
+          </div>
+          <div class="col">
+            <i class="bi bi-person-bounding-box"></i> No. of Owner<br /><b>
+            2nd Owner</b>
+          </div>
+          <div class="col">
+            <i class="bi bi-shield-fill"></i> Insurance Validity<br /><b>
+            Feb 2026</b>
+          </div>
+        </div>
+        <div class="row justify-content-around p-3">
+          <div class="col">
+            <i class="bi bi-shield-fill-check"></i> Insurance Type<br /><b>
+            Comprehensive</b>
+          </div>
+          <div class="col">
+            <i class="bi bi-car-front-fill"></i> RTO<br /><b>
+            MH-47</b>
+          </div>
+          <div class="col">
+            <i class="bi bi-speedometer"></i> Km Driven<br /><b>
+            57000 km</b>
+          </div>
+        </div>
+        <div class="row justify-content-around p-3">
+          <div class="col">
+            <i class="bi bi-geo-fill"></i> Car Location<br /><b>
+            Mumbai</b>
+          </div>
+          <div class="col">
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="car_heading_details col p-4 ">
+    <div class="car_heading_details col p-4 ms-2 me-2 ">
       <h3 class="mt-4">2020 Maruti Baleno ZETA PETROL 1.2</h3>
       <div class="row text-center mt-4">
         <h6 class="col">57000 KM</h6>
@@ -68,9 +134,25 @@
         <h6 class="col">PETROL</h6>
         <h6 class="col">MANUAL</h6>
       </div>
-      <div class="mt-3">
-        <p><i class="bi bi-geo-alt-fill"></i> Parked at: Kandivali, Mumbai</p>
-        <p style="margin-top:-12px">Test Drive: Available</p>
+      <p class="mt-3" style="color: rgb(0, 81, 255)">
+        <i class="bi bi-geo-alt-fill"></i> Parked at: Kandivali, Mumbai
+      </p>
+      <p
+        style="margin-top: -12px; color: rgb(0, 81, 255)"
+        class="border-bottom pb-4">
+        <i class="bi bi-car-front-fill"></i> Test Drive: Available
+      </p>
+      <h2><i class="bi bi-currency-rupee"></i>5,20,000</h2>
+      <p>
+        + other charges:
+        <i class="bi bi-currency-rupee" style="font-size: 14px"></i>4,000
+      </p>
+      <div class="row text-center">
+        <button type="button" class="col btn btn-primary m-3">BOOK NOW</button>
+
+        <button type="button" class="col btn btn-danger ps-5 pe-5 p-3 m-3">
+          FREE TEST DRIVE
+        </button>
       </div>
     </div>
     <div>
