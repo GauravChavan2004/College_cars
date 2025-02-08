@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,3 +134,9 @@ MEDIA_URL = '/media/'
 # Path where media is stored'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+JAZZMIN_SETTINGS={
+    'site_header': "One Point Car Mall",
+    'site_brand': "One Point Car Mall",
+    'site_logo': "media\logo\Car Logo 1 (1).png",
+    'copyright':"one-point-car-mall.com",
+}
