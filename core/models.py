@@ -27,7 +27,15 @@ class Car(models.Model):
     RTO = models.CharField(max_length=20)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     car_location = models.CharField(max_length=100)
-    
+    status = models.CharField(max_length=20, choices=[('AVAILABLE', 'Available'), ('BOOK', 'Book'),('SOLD', 'Sold')], default="AVAILABLE")
 
     def __str__(self):
         return f"{self.make} {self.model} ({self.registration_year})"
+    
+class CarImage(models.Model):
+    car = models.ForeignKey(Car, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='cars/', help_text="Upload an image of the car.")
+    description = models.CharField(max_length=255, blank=True, help_text="Description of the image (optional).")
+
+    def __str__(self):
+        return f"Image of {self.car.make} {self.car.model} ({self.id})"
