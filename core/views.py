@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404
 from core.models import Car
 
 
@@ -51,9 +51,8 @@ def indian_format(value):
     except (ValueError, TypeError):
         return value  # If there's an error, return the value as it is
     
-def car_view(request):
-    data = Car.objects.all()
-    for car in data:
-        car.formatted_price = indian_format(car.price)
-        
-    return render(request, "car_view/car_view.html",{'data':data})
+def car_view(request, car_id):
+    car = get_object_or_404(Car, id=car_id)  # Fetch car by ID
+    car.formatted_price = indian_format(car.price)  # Format only the selected car
+
+    return render(request, "car_view/car_view.html", {'car': car})

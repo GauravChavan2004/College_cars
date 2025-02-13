@@ -10,6 +10,7 @@ class Car(models.Model):
         ('Honda', 'Honda'),
         ('Ford', 'Ford'),
         ('Kia', 'Kia'),
+        ('Mahindra', 'Mahindra'),
         # Add more makes as needed
     ]
     reg_month_CHOICES = [
